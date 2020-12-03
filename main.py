@@ -5,35 +5,54 @@
 def jumlah_batas(nums, batas):
   # Tulis kode fungsi jumlah_batas() di bawah ini
   # Hapus pass jika implementasi sudah dibuat
-  hasil = 0;
+  total = 0; #membuat variabel penampung total
+  # membuat perulangan list nums
   for i in nums:
+    # jika ada nilai lebih dari batas
     if i > batas:
-      hasil += i
-  
-  return hasil
+      # hitung total nilai nya
+      total += i
+  # mengembalikan nilai total
+  return total
 
 def list_nonvokal(s):
   # Tulis kode fungsi list_nonvokal() di bawah ini
   # Hapus pass jika implementasi sudah dibuat
+  # membuat list kosong untuk penampung
   newList = []
+  # melakukan perulangan sebanyak string s
   for i in s:
+    # jika chart i tidak berupa aiueo
     if i.lower() not in "aiueo":
-      newList.append(i)   
+      # menambahkan element baru dengan nilai i
+      newList.append(i) 
+  # mengembalikan nilai list baru 
   return newList
 
 def list_modify(alist, command, position, value=None):
   # Tulis kode fungsi list_modify() di bawah ini
   # Hapus pass jika implementasi sudah dibuat
+  # jika command add
   if command =='add':
+    # jika position start
     if position == 'start':
+      # insert element di index pertama
       alist.insert(0,value)
+    # jika position end
     elif position =='end':
+      # insert element di index terakhir
       alist.append(value)
+  # jika command remove    
   elif command =='remove':
+    # jika position start
     if position == 'start':
+      # hapus element di index pertama
       del alist[0]
+    # jika position end
     elif position =='end':
+       # hapus element di index terakhir
       del alist[len(alist)-1]
+  # mengembalikan nilai list baru
   return alist
 
 
